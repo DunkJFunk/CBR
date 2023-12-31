@@ -22,9 +22,9 @@ const Navbar = () => {
         <div className="flex justify-between items-center py-4">
           <img onClick={handleScrolltoTop} src={logo2} alt="Classic Boat Restoration" className='h-32'/>
         <div className="flex text-slate-900 font-bold font-montserrat text-3xl gap-8 max-sm:text-transparent">
-          <p onClick={handleAbout}>About</p>
-          <p onClick={handleWork}>Our Work</p>
-          <p onClick={handleContact}>Contact</p>
+          <button onClick={handleAbout}>About</button>
+          <button onClick={handleWork}>Our Work</button>
+          <button onClick={handleContact}>Contact</button>
         </div>
         </div>
       </div>
