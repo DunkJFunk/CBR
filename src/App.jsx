@@ -12,7 +12,7 @@ import Chevron from "./components/Chevron.jsx";
 
 const App = () => {
   return (
-    <div className=" bg-slate-900">
+    <div className="bg-slate-900">
       <Navbar />
       <NavFollow />
       <LandingPage />
