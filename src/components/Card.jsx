@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Card(boat) {    
     const ellipsis = (str, length) => {
@@ -18,7 +19,9 @@ function Card(boat) {
           <img className="h-48 w-full object-cover md:h-full md:w-48" src={boat.img} alt={boat.name} />
         </div>
         <div className="p-8">
-          <p className="block mt-1 text-lg leading-tight font-medium text-black hover:underline">{boat.name}</p>
+          <Link to="about/">
+            <p className="block mt-1 text-lg leading-tight font-medium text-black hover:underline">{boat.name}</p>
+          </Link>
           <p className="mt-2 text-gray-500">{ellipsis(boat.content, 300)}</p>
         </div>
       </div>

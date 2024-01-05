@@ -1,6 +1,7 @@
 import React from 'react';
 // import logo from '../media/logo.png';
 import logo2 from '../media/logo2.png';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const handleScrolltoTop = () => {
@@ -20,7 +21,9 @@ const Navbar = () => {
     <div className='w-screen flex items-center justify-center'>
       <div className="fixed container mx-2 z-20 top-2">
         <div className="flex justify-between items-center py-4 max-sm:ml-16">
+        <Link to="/">
           <img onClick={handleScrolltoTop} src={logo2} alt="Classic Boat Restoration" className='h-32 max-sm:h-20'/>
+        </Link>
         <div className="flex text-slate-900 font-bold font-montserrat text-3xl gap-8 max-sm:text-transparent">
           <button onClick={handleAbout}>About</button>
           <button onClick={handleWork}>Our Work</button>

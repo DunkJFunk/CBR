@@ -7,7 +7,7 @@ const createBoat = (boat) => {
     key={boat.key}
     name={boat.name}
     content={boat.content}
-    img={boat.img}
+    img={boat.img[0]}
   />
 }
 
