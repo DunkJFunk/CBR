@@ -10,6 +10,7 @@ import Contact from "./components/Contact.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Chevron from "./components/Chevron.jsx";
 
+
 const App = () => {
   return (
     <div className="bg-slate-900">
