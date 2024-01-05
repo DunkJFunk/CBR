@@ -12,14 +12,14 @@ function Card(boat) {
     //     </div>
     //     <img className="border-4 border-slate-900 rounded" src={boat.img} alt={boat.name} />
     // </div>
-    <div class="max-w-md mx-auto bg-white border-4 border-slate-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-      <div class="md:flex">
-        <div class="md:flex-shrink-0">
-          <img class="h-48 w-full object-cover md:h-full md:w-48" src={boat.img} alt="Man looking at item at a store" />
+    <div className="max-w-md mx-auto bg-white border-4 border-slate-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+      <div className="md:flex">
+        <div className="md:flex-shrink-0">
+          <img className="h-48 w-full object-cover md:h-full md:w-48" src={boat.img} alt={boat.name} />
         </div>
-        <div class="p-8">
-          <p class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">{boat.name}</p>
-          <p class="mt-2 text-gray-500">{ellipsis(boat.content, 300)}</p>
+        <div className="p-8">
+          <p className="block mt-1 text-lg leading-tight font-medium text-black hover:underline">{boat.name}</p>
+          <p className="mt-2 text-gray-500">{ellipsis(boat.content, 300)}</p>
         </div>
       </div>
     </div>
