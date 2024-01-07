@@ -3,22 +3,30 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import ErrorPage from './routes/ErrorPage';
-import AboutB from './routes/AboutB';
+import Root from './routes/Root';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import BoatMore from './routes/BoatMore';
 
 const router = createBrowserRouter([
   {
-    path: "/*",
-    element: <App />,
+    path: "/",
+    element: <Root />,
     errorElement: <ErrorPage />,
-  },
-  {
-    path: "about/:key",
-    element: <AboutB />,
-    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "about/:key",
+        element: <BoatMore />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/",
+        element: <App />,
+        errorElement: <ErrorPage />,
+      },
+    ],
   },
 ]);
 
