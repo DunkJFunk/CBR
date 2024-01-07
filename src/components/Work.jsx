@@ -5,6 +5,7 @@ import { boats } from "./Boats.js";
 const createBoat = (boat) => {
     return <Card
     key={boat.key}
+    tagNum={boat.tagNum}
     name={boat.name}
     content={boat.content}
     img={boat.img[0]}
