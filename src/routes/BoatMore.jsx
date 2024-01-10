@@ -9,7 +9,7 @@ import {
 const BoatMore = () => {
     const { key } = useParams()
     let selectedKey = parseInt(key);
-    const selectedBoat = boats.find(boats => boats.key === selectedKey)
+    const selectedBoat = boats.find(boats => boats.tagNum === selectedKey)
 
     const createImgs = (boat) => {     // How we create organize the images from the boats array into a format that ImageGallery can use
         const images = [];  
