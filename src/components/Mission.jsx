@@ -1,18 +1,18 @@
 import React from "react";
-import GroupPic from "../media/about.jpg";
+import GroupPic from "../media/missionfoto.jpeg";
 import Wave2 from "./Wave2";
 
 const Mission = () => {
 
     return (
         <div className="h-auto w-screen">
-            <div className="flex max-sm:flex-col align-middle justify-center pb-16 pt-48 gap-24 bg-slate-900 max-sm:gap-8 max-sm:pt-16">
-                <div className="flex-row align-middle justify-center w-1/4 h-full max-sm:w-full">
-                    <img src={GroupPic} alt="5200 Bottom Coverage" className="border-8 border-slate-900 px-6"/>
+            <div className="flex max-md:flex-col align-middle justify-center pb-16 pt-48 gap-24 bg-slate-900 max-md:gap-8 max-md:pt-16">
+                <div className="flex-row align-middle justify-center w-1/4 h-full max-md:w-full">
+                    <img src={GroupPic} alt="5200 Bottom Coverage" className="border-8 border-owhite mx-6"/>
                     <p className="text-center mt-6 text-slate-300 max-sm:hidden">Our Team C 202X</p>
                 </div>
-                <div className="w-1/3 text-left mt-6 max-sm:w-full max-sm:mt-2 max-sm:px-10">
-                    <h2 className="text-6xl font-bebasneue text-owhite max-sm:text-5xl">Our Mission</h2>
+                <div className="w-1/3 text-left mt-6 max-md:w-full max-md:mt-2 max-md:px-10">
+                    <h2 className="text-6xl font-bebasneue text-owhite max-lg:text-5xl">Our Mission</h2>
                     <h2 className="font-semibold text-4xl mb-5 text-owhite font-bebasneue">______</h2>
                     <p className="text-3xl text-owhite max-md:text-xl">
                     We love mahogany boats and are simply passionate about them. After more than twenty years, over one hundred restorations, 

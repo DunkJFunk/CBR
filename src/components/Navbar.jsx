@@ -3,13 +3,14 @@ import React from 'react';
 import logo2 from '../media/logo2.png';
 import { Link } from 'react-router-dom';
 
+
 const Navbar = () => {
   const handleScrolltoTop = () => {
     window.scrollTo({top: 0, behavior: 'smooth'});
   };
   const handleContact = () => {
     window.scrollTo({top: 99999, behavior: 'smooth'});
-  };
+  };  
   const handleAbout = () => {
     window.scrollTo({top: 950, behavior: 'smooth'});
   };
