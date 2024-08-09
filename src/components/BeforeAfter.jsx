@@ -11,7 +11,7 @@ import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slide
 
 const BeforeAfter = () => {
   return (
-    <div style={{ backgroundImage: `url(${b1})`, backgroundSize: '100% auto', backgroundRepeat: ""}}>
+    <div style={{ backgroundImage: `url(${b1})`, backgroundSize: 'cover', backgroundRepeat: ""}}>
       <div className="max-sm:bg-slate-900">
         <div className="flex align-middle justify-center pb-14 pt-20 relative ">
           <div>

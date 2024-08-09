@@ -23,7 +23,7 @@ const Navbar = () => {
       <div className="fixed container mx-2 z-20 top-2">
         <div className="flex justify-between items-center my-4 max-sm:ml-16 md:mx-8">
         <Link to="/">
-          <img onClick={handleScrolltoTop} src={logo2} alt="Classic Boat Restoration" className='h-32 max-sm:h-20 w'/>
+          <img onClick={handleScrolltoTop} src={logo2} alt="Classic Boat Restoration" className=' h-24 max-sm:h-20 w'/>
         </Link>
         <Link className='max-sm:hidden' to="/">
           <div className="flex text-slate-900 font-bold font-montserrat text-3xl gap-8 max-sm:text-transparent">
