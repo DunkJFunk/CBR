@@ -19,21 +19,21 @@ const BeforeAfter = () => {
               itemOne={<ReactCompareSliderImage src={before1} alt="Before" />}
               itemTwo={<ReactCompareSliderImage src={after1} alt="After" />}
             />
-            <p className="text-center text-xl text-white font-playfair mt-4">Chris Craft XX</p>
+            {/* <p className="text-center text-xl text-white font-playfair mt-4">Chris Craft XX</p> */}
           </div>
           <div className="hidden sm:block">
             <ReactCompareSlider className="mx-6 border-owhite border-8 h-72"
               itemOne={<ReactCompareSliderImage src={before2} alt="Before" />}
               itemTwo={<ReactCompareSliderImage src={after2} alt="After" />}
             />
-            <p className="text-center text-xl text-white font-playfair mt-4">Chris Craft XX</p>
+            {/* <p className="text-center text-xl text-white font-playfair mt-4">Chris Craft XX</p> */}
           </div>
           <div className="hidden md:block">
             <ReactCompareSlider className="mx-6 border-owhite border-8 h-72"
               itemOne={<ReactCompareSliderImage src={before3} alt="Before" />}
               itemTwo={<ReactCompareSliderImage src={after3} alt="After" />}
             />
-            <p className="text-center text-xl text-white font-playfair mt-4">Chris Craft XX</p>
+            {/* <p className="text-center text-xl text-white font-playfair mt-4">Chris Craft XX</p> */}
           </div>
         </div>
         <h2 className="text-center text-4xl font-bebasneue pb-10 text-owhite">See more of our work</h2>

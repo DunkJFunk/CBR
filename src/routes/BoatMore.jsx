@@ -20,20 +20,20 @@ const BoatMore = () => {
     }   
     
     return (
-        <div className='bg-owhite h:100lvh'>
-            <div className="flex flex-col align-middle justify-center my-96 bmax-sm:g-4 max-sm:pt-16">
-                <div className="align-middle justify-center w-1/4 h-full max-sm:w-full max-sm:m-4">
-                    <ImageGallery items={createImgs(selectedBoat)} showFullscreenButton={false} showPlayButton={false}/>
-                </div>
-                <div className="w-1/3 text-left mt-6 max-sm:w-full max-sm:mt-2 max-sm:px-10">
+        <div className='bg-owhite h-fit justify-center align-middle pt-32'>
+            <div className="text-6xl font-bebasneue mb-16 text-slate-900 text-center max-sm:text-3xl max-sm:mb-8 flex flex-col items-center">
+                <div className="text-center mt-6 max-sm:w-full max-sm:mt-2 max-sm:px-10">
                     {selectedBoat ? (
                         <div>
-                            <h2 className="text-6xl font-bebasneue mb-5 text-slate-900">{selectedBoat.name}</h2>
+                            <h2 className="text-6xl font-bebasneue mb-8 text-slate-900">- {selectedBoat.name} -</h2>
                             <p className="hidden text-3xl text-slate-900">{selectedBoat.content}</p>
                         </div>
                     ) : (
                         <p className="text-3xl text-slate-900">Loading...</p>
                     )}
+                </div>
+                <div className="max-sm:max-w-md px-6">
+                    <ImageGallery items={createImgs(selectedBoat)} showFullscreenButton={true} showPlayButton={false}/>
                 </div>
             </div>
         </div>
