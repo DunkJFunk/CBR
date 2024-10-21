@@ -47,3 +47,7 @@
 .grow:hover { 
   transform: scale(1.1); 
 }
+
+.work {
+  scroll-margin: 32px;
+}

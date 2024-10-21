@@ -9,14 +9,32 @@ const Navbar = () => {
     window.scrollTo({top: 0, behavior: 'smooth'});
   };
   const handleContact = () => {
-    window.scrollTo({top: 99999, behavior: 'smooth'});
-  };  
+    const anchorId = document.getElementById('contact');
+    if (anchorId) {
+        anchorId.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
+        });
+    }};  
   const handleAbout = () => {
-    window.scrollTo({top: 950, behavior: 'smooth'});
-  };
+    const anchorId = document.getElementById('mission');
+    if (anchorId) {
+        anchorId.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'center'
+        });
+    }};
   const handleWork = () => {
-    window.scrollTo({top: 3200, behavior: 'smooth'});
-  };
+    const anchorId = document.getElementById('work');
+    if (anchorId) {
+        anchorId.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
+        });
+    }};
 
   return (
     <div className='w-screen flex items-center justify-center'>
