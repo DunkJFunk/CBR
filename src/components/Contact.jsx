@@ -20,10 +20,19 @@ const Contact = () => {
     return (
         <div className=" py-20 lg:py-16 px-4 mx-auto max-w-screen-md">
             <h2 className="mb-4 text-4xl font-extrabold text-center text-gray-900 dark:text-white font-montserrat">Contact Us</h2>
-            <p className="mb-2 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Jim Horne : (260) 450-2037</p>
-            <p className="mb-2 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Jeff Funk : (260) 414-0016</p>
-            <p className="mb-2 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">OR Email us directly or down below at</p>
-            <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">thecbrshop@gmail.com</p>
+            <div className="grid grid-cols-2 justify-center align-middle gap-8">
+                <div className="font-light text-right">
+                    <p className="mb-2 font-light text-gray-500 dark:text-gray-400 sm:text-xl">Jim Horne : (260) 450-2037</p>
+                    <p className="mb-2 font-light text-gray-500 dark:text-gray-400 sm:text-xl">Jeff Funk : (260) 414-0016</p>
+                    <p className="mb-8 lg:mb-16 font-light text-gray-500 dark:text-gray-400 sm:text-xl">thecbrshop@gmail.com</p>
+                </div>
+                <div className="font-light text-left">
+                    <p className="mb-2 font-light text-gray-500 dark:text-gray-400 sm:text-xl">16356 N. Lima Rd</p>
+                    <p className="mb-2 font-light text-gray-500 dark:text-gray-400 sm:text-xl">Building #5</p>
+                    <p className="mb-2 font-light text-gray-500 dark:text-gray-400 sm:text-xl">Huntertown, IN</p>
+                </div>
+            </div>
+            <p className="mb-2 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">OR email us directly down below!</p>
             <form ref={form} onSubmit={handleSubmit} className="space-y-8">
                 <div>
                     <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>

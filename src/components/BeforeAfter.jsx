@@ -11,7 +11,7 @@ import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slide
 
 const BeforeAfter = () => {
   return (
-    <div style={{ backgroundImage: `url(${b1})`, backgroundSize: 'cover', backgroundRepeat: ""}}>
+    <div style={{ backgroundImage: `url(${b1})`, backgroundSize: 'cover', backgroundRepeat: ""}} id="beforeafter">
       <div className="max-sm:bg-slate-900">
         <div className="flex align-middle justify-center pb-14 pt-20 relative ">
           <div>
@@ -36,7 +36,7 @@ const BeforeAfter = () => {
             {/* <p className="text-center text-xl text-white font-playfair mt-4">Chris Craft XX</p> */}
           </div>
         </div>
-        <h2 className="text-center text-4xl font-bebasneue pb-10 text-owhite">See more of our work</h2>
+        <button className="text-center text-4xl font-bebasneue pb-10 text-owhite">See more of our work</button>
       </div>
     </div>
   );
