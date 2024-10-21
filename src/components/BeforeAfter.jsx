@@ -36,7 +36,7 @@ const BeforeAfter = () => {
             {/* <p className="text-center text-xl text-white font-playfair mt-4">Chris Craft XX</p> */}
           </div>
         </div>
-        <button className="text-4xl font-bebasneue pb-10 text-owhite">See more of our work</button>
+        <button className="text-4xl font-bebasneue pb-10 text-owhite" onClick={() => {window.location.href = 'https://www.youtube.com/@classicwoodies'}}>Click Here to see these boats IN ACTION</button>
       </div>
     </div>
   );
