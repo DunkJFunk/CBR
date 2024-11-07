@@ -17,7 +17,7 @@ const BottInfo = () => {
                     </p>
                     </div>
                 <div className="mt-6 flex-row align-middle justify-center w-1/3 h-full max-md:w-full max-md:p-4 max-md:">
-                    <video src={BoatVid} autoPlay loop muted alt="5200 Bottom Coverage" className="border-8 border-slate-900"/>
+                    <video src={BoatVid} autoPlay loop muted webkit-playsinline playsinline alt="5200 Bottom Coverage" className="border-8 border-slate-900"/>
                     <p className="text-center mt-6 text-slate-300 max-sm:hidden">Our Team C 202X</p>
                 </div>
             </div>

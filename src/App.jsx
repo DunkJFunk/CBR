@@ -6,11 +6,13 @@ import Mission from "./components/Mission.jsx";
 import Work from "./components/Work.jsx";
 import Contact from "./components/Contact.jsx";
 import Chevron from "./components/Chevron.jsx";
+import NavFollow from "./components/NavFollow.jsx";
 
 
 const App = () => {
   return (
     <div className="bg-slate-900">
+      <NavFollow />
       <LandingPage />
       <Chevron />
       <Mission />

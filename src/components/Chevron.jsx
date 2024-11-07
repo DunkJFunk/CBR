@@ -2,8 +2,14 @@ import React from "react";
 
 const Chevron = () => {
     const handleChevron = () => {
-        window.scrollTo({top: 950, behavior: 'smooth'});
-      };
+        const anchorId = document.getElementById('mission');
+        if (anchorId) {
+            anchorId.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+                inline: 'center'
+            });
+        }};
     return (
         <svg onClick={handleChevron} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120.5 66.8 " className="fill-white h-7 absolute w-screen mt-8 max-sm:hidden" >
             <g><g>

@@ -26,16 +26,7 @@ const Navbar = () => {
             inline: 'center'
         });
     }};
-  const handleWork = () => {
-    const anchorId = document.getElementById('work');
-    if (anchorId) {
-        anchorId.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-            inline: 'nearest'
-        });
-    }};
-
+  
   return (
     <div className='w-screen flex items-center justify-center'>
       <div className="fixed container mx-2 z-20 top-2">
@@ -46,8 +37,10 @@ const Navbar = () => {
         <Link className='max-sm:hidden' to="/">
           <div className="flex text-slate-900 font-bold font-montserrat text-3xl gap-8 max-sm:text-transparent">
               <button onClick={handleAbout}>About</button>
-              <button onClick={handleWork}>Our Work</button>
               <button onClick={handleContact}>Contact</button>
+              <Link to="/admin">
+                <button>Account</button>
+              </Link>
           </div>
         </Link>
         </div>

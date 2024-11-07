@@ -9,7 +9,7 @@ const Mission = () => {
         <div className="h-auto w-screen" id="mission">
             <div className="flex max-md:flex-col align-middle justify-center pb-16 pt-48 gap-24 bg-slate-900 max-md:gap-8 max-md:pt-16">
                 <div className="flex-row align-middle justify-center w-[40%] h-full max-md:w-full mt-6 px-6">
-                    <video src={BoatVid} autoPlay loop muted alt="5200 Bottom Coverage" className="border-8 border-owhite"/>
+                    <video src={BoatVid} autoPlay loop muted webkit-playsinline playsinline alt="5200 Bottom Coverage" className="border-8 border-owhite"/>
                     <p className="text-center mt-6 text-slate-300">Classic Boat Restoration team, 2021</p>
                 </div>
                 <div className="w-1/3 text-left mt-6 max-md:w-full max-md:mt-2 max-md:px-10">

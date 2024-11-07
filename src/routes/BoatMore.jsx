@@ -4,6 +4,7 @@ import { boats } from "../components/Boats";
 import {
     useParams,
 } from "react-router-dom";
+import NavFollow from '../components/NavFollow';
 
 
 const BoatMore = () => {
@@ -17,10 +18,12 @@ const BoatMore = () => {
                 images.push({original: boat.img[i], thumbnail: boat.img[i]})
             }
         return images;
-    }   
+    }
     
     return (
-        <div className='bg-owhite h-fit justify-center align-middle pt-32 min-h-[95lvh]'>
+        <div>
+        <NavFollow />
+        <div className='bg-owhite h-fit justify-center align-middle pt-32 min-h-[91lvh]'>
             <div className="text-6xl font-bebasneue mb-16 text-slate-900 text-center max-sm:text-3xl max-sm:mb-8 flex flex-col items-center">
                 <div className="text-center mt-6 max-sm:w-full max-sm:mt-2 max-sm:px-10">
                     {selectedBoat ? (
@@ -36,6 +39,7 @@ const BoatMore = () => {
                     <ImageGallery items={createImgs(selectedBoat)} showFullscreenButton={true} showPlayButton={false}/>
                 </div>
             </div>
+        </div>
         </div>
     );
 };
