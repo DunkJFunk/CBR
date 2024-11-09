@@ -12,7 +12,6 @@ import NavFollow from "./components/NavFollow.jsx";
 const App = () => {
   return (
     <div className="bg-slate-900">
-      <NavFollow />
       <LandingPage />
       <Chevron />
       <Mission />

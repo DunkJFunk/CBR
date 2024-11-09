@@ -13,12 +13,10 @@ const Mission = () => {
                     <p className="text-center mt-6 text-slate-300">Classic Boat Restoration team, 2021</p>
                 </div>
                 <div className="w-1/3 text-left mt-6 max-md:w-full max-md:mt-2 max-md:px-10">
-                    <h2 className="text-6xl font-bebasneue text-owhite max-lg:text-5xl">Our Mission</h2>
-                    <h2 className="font-semibold text-4xl mb-5 text-owhite font-bebasneue">______</h2>
-                    <p className="text-xl text-owhite max-md:text-xl">
-                    We love mahogany boats and are simply passionate about them. After more than twenty years, over one hundred restorations, 
-                    and more than 250 boat bottoms completed we know what we’re doing, and share the same pride in these boats when finished as their owners do.
-                    That means communicating every step of the way and making sure we are exceeding every expectation.
+                    <h2 className="text-5xl font-bebasneue text-owhite max-lg:text-4xl">Our Mission</h2>
+                    <h2 className="font-semibold text-3xl mb-5 text-owhite font-bebasneue">______</h2>
+                    <p className="text-xl text-owhite max-md:text-xl font-montserrat">
+                    Here at Classic Boat Restorations we are passionate about classic mahogany powerboats.  We know you are too.  We believe in doing things right the first time, and take pride in our craftsmanship.  From master carpenters, to expert finishers…combined with using only the best marine products available...our goal is to provide a safe and beautiful classic you can enjoy for years to come with family and friends.  Let us restore a classic for you!
                     </p>
                 </div>
             </div>

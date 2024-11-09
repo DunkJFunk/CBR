@@ -20,14 +20,14 @@ const Contact = () => {
     }
 
     return (
-        <div className=" py-20 lg:py-16 px-4 mx-auto max-w-screen-md scroll-m-32" id="contact">
+        <div className=" py-20 lg:py-16 px-4 mx-auto max-w-screen-md scroll-m-24" id="contact">
             <h2 className="text-4xl font-extrabold text-center text-gray-900 dark:text-white font-montserrat">Contact Us</h2>
             <div className="flex gap-10 justify-center align-middle my-4">
                 <button type="button" onClick={() => {window.location.href = 'https://www.youtube.com/@classicwoodies'}}><FontAwesomeIcon icon={faYoutube} className="h-12 text-owhite"/></button>
                 <button type="button" onClick={() => {window.location.href = 'https://www.instagram.com/Classicwoodies'}}><FontAwesomeIcon icon={faInstagram} className="h-12 text-owhite"/></button>
                 <button type="button" onClick={() => {window.location.href = 'https://www.facebook.com/profile.php?id=61552267165458'}}><FontAwesomeIcon icon={faFacebook} className="h-12 text-owhite"/></button>
             </div>
-            <div className="grid grid-cols-2 justify-center align-middle gap-8">
+            <div className="grid grid-cols-2 justify-center align-middle gap-12">
                 <div className="font-light text-right">
                     <p className="mb-2 font-light text-gray-500 dark:text-gray-400 sm:text-xl">Jim Horne : (260) 450-2037</p>
                     <p className="mb-2 font-light text-gray-500 dark:text-gray-400 sm:text-xl">Jeff Funk : (260) 414-0016</p>
