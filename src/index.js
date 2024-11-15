@@ -11,6 +11,7 @@ import {
 import BoatMore from './routes/BoatMore';
 import Admin from './routes/Admin';
 import Login from './routes/Login';
+import Gallery from './routes/Gallery';
 
 const router = createBrowserRouter([
   {
@@ -34,7 +35,12 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
       },
       {
-        path: "about/:key",
+        path: "gallery/",
+        element: <Gallery />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "gallery/:key",
         element: <BoatMore />,
         errorElement: <ErrorPage />,
       },

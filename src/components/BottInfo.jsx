@@ -1,6 +1,6 @@
 import React from "react";
-import BoatPic from "../media/5200bot.jpeg";
-import BoatVid from "../media/5200bot.mp4";
+import BoatPic from "../assets/5200bot.jpeg";
+import BoatVid from "../assets/5200bot.mp4";
 
 const BottInfo = () => {
     return (

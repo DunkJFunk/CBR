@@ -1,6 +1,6 @@
 import React from 'react';
 // import logo from '../media/logo.png';
-import logo from '../media/logo.png';
+import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -37,8 +37,8 @@ const Navbar = () => {
           <div className="flex text-slate-900 font-bold font-montserrat text-2xl gap-8 max-sm:text-transparent">
               <button onClick={handleAbout}>About</button>
               <button onClick={handleContact}>Contact</button>
-              <Link to="/admin">
-                <button>Account</button>
+              <Link to="/gallery">
+                <button onClick={handleScrolltoTop}>Gallery</button>
               </Link>
           </div>
         </Link>

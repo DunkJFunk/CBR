@@ -1,11 +1,11 @@
 import React from "react";
-import before3 from "../media/beforeandafter-before3.jpg";
-import after3 from "../media/beforeandafter-after3.jpg";
-import before2 from "../media/beforeandafter-before2.jpg";
-import after2 from "../media/beforeandafter-after2.jpg";
-import before1 from "../media/beforeandafter-before.jpg";
-import after1 from "../media/beforeandafter-after.jpg";
-import b1 from "../media/b1.jpg";
+import before3 from "../assets/beforeandafter-before3.jpg";
+import after3 from "../assets/beforeandafter-after3.jpg";
+import before2 from "../assets/beforeandafter-before2.jpg";
+import after2 from "../assets/beforeandafter-after2.jpg";
+import before1 from "../assets/beforeandafter-before.jpg";
+import after1 from "../assets/beforeandafter-after.jpg";
+import b1 from "../assets/b1.jpg";
 
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 

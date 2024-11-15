@@ -1,7 +1,7 @@
 import React from "react";
-import GroupPic from "../media/missionfoto.jpeg";
+import GroupPic from "../assets/missionfoto.jpeg";
 import Wave2 from "./Wave2";
-import BoatVid from "../media/MissionVid.mp4";
+import BoatVid from "../assets/MissionVid.mp4";
 
 const Mission = () => {
 

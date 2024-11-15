@@ -12,6 +12,12 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Peirce Jameson Script';
+  src: url('../public/font/piercejamesonscript-1gddz.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @tailwind base;
 @tailwind components;
@@ -19,6 +25,9 @@
 @tailwind screens;
 @tailwind variants;
 
+.font-jameson {
+  font-family: 'Peirce Jameson Script', cursive;
+}
 
 .font-playfair {
   font-family: 'Playfair Display', serif;
