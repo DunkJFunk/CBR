@@ -72,8 +72,8 @@ app.get("/boats", async (req, res) => {
 app.get("/boats/:id", async (req, res) => {
     try {
         const { id } = req.params;
-        const creature = await pool.query("SELECT * FROM boats WHERE key = $1", [id]);
-        res.json(creature.rows[0]);
+        const boat = await pool.query("SELECT * FROM boats WHERE serialnum = $1", [id]);
+        res.json(boat.rows[0]);
     } catch(error) {
         console.error(error);
     }

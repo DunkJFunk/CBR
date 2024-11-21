@@ -1,21 +1,34 @@
 import React, { useState } from 'react'
 import Card from '../components/Card.jsx'
-import { boats } from "../components/Boats.js";
 
 const createBoat = (boat) => { 
   console.log(boat)
     return <Card
     key={boat.id}
-    serialNum={boat.serialNum}
+    serialnum={boat.serialnum}
     name={boat.name}
-    images={boat.images}
+    images={boat.images[0]}
   />
 }
 
 const Gallery = () => {
   const [category, setCategory] = useState("All")
-  const [boatSet, setBoatSet] = useState(boats)
+  const [isLoading, setIsLoading] = useState(false);
+  const [boatSet, setBoatSet] = useState([{
+    id: 0,
+    serialnum: "",
+    name: "",
+    images: [""]
+  }])
   
+  const handleGenerate = () => {
+    if (category === "All") {
+      handleAll()
+    } else {
+      handleAll()
+    }
+  }
+
   const handleAll = async () => {
     try {
       const response = await fetch("http://localhost:8080/boats")
@@ -27,8 +40,12 @@ const Gallery = () => {
   }
 
   React.useEffect(() => {
-    handleAll();
-  }, []);
+    setIsLoading(true);
+    handleGenerate();
+    if (handleGenerate()) {
+        setIsLoading(false);
+    }
+}, []);
 
   return (
     <div>
@@ -63,16 +80,14 @@ const Gallery = () => {
       )}
       <div id='gallery' className="min-h-screen flex flex-col items-center bg-owhite">
         <div className="grid grid-cols-1 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-12">
-          {category === "All" ? (
+          {isLoading ? (
             <>
               {
                 boatSet.map((boats) => createBoat(boats))
               }
             </>
           ) : (
-            <>
-              {boatSet.map(createBoat)}
-            </>
+            <div className="text-3xl font-montserrat">Loading...</div>
           )}
         </div>
       </div>

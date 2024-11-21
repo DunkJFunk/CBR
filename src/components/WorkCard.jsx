@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Card(boat) {
+function WorkCard(boat) {
   console.log(boat.serialnum);
   // const ellipsis = (str, length) => {
   //   return str.length > length ? str.substring(0, length) + "..." : str;
   // };
 
   return (
-    <Link to={`${boat.serialnum}`}>
+    <Link to={`/gallery/${boat.serialnum}`}>
       <div className="flex flex-col max-w-md mx-auto text-black bg-gray-50 rounded-lg shadow-md overflow-hidden md:max-w-2xl transition duration-500 hover:scale-110">
         <div className="md:flex-shrink-0">
           <img className="h-48 w-full object-cover" src={boat.images} alt={boat.name} />
@@ -21,4 +21,4 @@ function Card(boat) {
   );
 };
 
-export default Card;
+export default WorkCard;

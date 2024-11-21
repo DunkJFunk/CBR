@@ -28,7 +28,7 @@ const BoatUpload = () => {
             </div>
 
             <label htmlFor="images">Image:</label>
-            <input type="file" name="images" accept='image/*' required />
+            <input type="file" name="images" accept='image/*' required multiple />
 
             <button onClick={handleSubmit} type='submit' value="Submit" className='self-center w-fit py-2 px-4 rounded-md bg-white hover:bg-slate-600'>
                 Submit

@@ -40,6 +40,9 @@ const Navbar = () => {
               <Link to="/gallery">
                 <button onClick={handleScrolltoTop}>Gallery</button>
               </Link>
+              <Link to="/admin">
+                <button onClick={handleScrolltoTop}>Admin</button>
+              </Link>
           </div>
         </Link>
         </div>

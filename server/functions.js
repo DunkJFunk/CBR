@@ -25,7 +25,8 @@ async function writePicture (pic) {
     try {
         console.log("4");
         console.log(pic);
-        const fileName = `image-${Date.now()}.jpg`; // Unique file name
+        const serialNumber = `${Date.now().toString()}-${Math.floor(Math.random() * 10001).toString()}`;
+        const fileName = `image-${serialNumber}.jpg`; // Unique file name
 
         // Since where we access vs. save our images is different, we have two seperate relative paths
         const filePath = path.join('../public/media', fileName);
@@ -44,7 +45,7 @@ async function writePicture (pic) {
 async function buildBoat (name, images) {
     try {
         console.log("3");
-        const serialNumber = `${Date.now().toString()}-${Math.floor(Math.random() * 1001).toString()}`;
+        const serialNumber = `${Date.now().toString()}-${Math.floor(Math.random() * 10001).toString()}`;
 
         // Ensure all images are processed before returning the boat object
         const processedImages = await Promise.all(
@@ -59,7 +60,8 @@ async function buildBoat (name, images) {
         return {
             name: name,
             images: processedImages,
-            serial: serialNumber,
+            serialnum: serialNumber,
+            tags: [],
         };
     } catch (error) {
         console.error(error)
