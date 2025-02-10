@@ -29,8 +29,8 @@ const Contact = () => {
             </div>
             <div className="grid grid-cols-2 justify-center align-middle gap-12">
                 <div className="font-light text-right">
-                    <p className="mb-2 font-light text-gray-500 dark:text-gray-400 sm:text-xl">Jim Horne : (260) 450-2037</p>
-                    <p className="mb-2 font-light text-gray-500 dark:text-gray-400 sm:text-xl">Jeff Funk : (260) 414-0016</p>
+                    <p className="mb-2 font-light text-gray-500 dark:text-gray-400 sm:text-xl">Jim Horne: (260) 450-2037</p>
+                    <p className="mb-2 font-light text-gray-500 dark:text-gray-400 sm:text-xl">Jeff Funk: (260) 414-0016</p>
                     <p className="mb-8 lg:mb-16 font-light text-gray-500 dark:text-gray-400 sm:text-xl">thecbrshop@gmail.com</p>
                 </div>
                 <div className="font-light text-left">

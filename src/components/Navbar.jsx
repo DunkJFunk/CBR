@@ -2,8 +2,12 @@ import React from 'react';
 // import logo from '../media/logo.png';
 import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
+import { useAuth0, Auth0Provider } from "@auth0/auth0-react";
+import admin from "../assets/admin-icon.png";
 
 const Navbar = () => {
+  const { loginWithRedirect } = useAuth0();
+
   const handleScrolltoTop = () => {
     window.scrollTo({top: 0, behavior: 'smooth'});
   };
@@ -36,13 +40,10 @@ const Navbar = () => {
         <Link className='max-sm:hidden' to="/">
           <div className="flex text-slate-900 font-bold font-montserrat text-2xl gap-8 max-sm:text-transparent">
               <button onClick={handleAbout}>About</button>
-              <button onClick={handleContact}>Contact</button>
               <Link to="/gallery">
                 <button onClick={handleScrolltoTop}>Gallery</button>
               </Link>
-              <Link to="/admin">
-                <button onClick={handleScrolltoTop}>Admin</button>
-              </Link>
+              <button onClick={handleContact}>Contact</button>
           </div>
         </Link>
         </div>

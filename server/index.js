@@ -11,7 +11,12 @@ const upload = multer({ storage: multer.memoryStorage() });
 
 // Setting the export default to JSON
 app.use(cors());
-app.use(express.json())
+app.use(express.json());
+
+app.use((req, res, next) => {
+    res.header('Access-Control-Expose-Headers', 'X-Total-Count');
+    next();
+  });
 
 //ROUTES//
 
@@ -46,8 +51,8 @@ app.post("/boats", upload.array("images"), async (req, res) => {
 
         // Insert into the database
         const uploadBoat = await pool.query(
-            "INSERT INTO boats (name, images, serialNum) VALUES($1, $2, $3) RETURNING *",
-            [boat.name, JSON.stringify(boat.images), boat.serial]
+            "INSERT INTO boats (name, images, serialnum) VALUES($1, $2, $3) RETURNING *",
+            [boat.name, JSON.stringify(boat.images), boat.serialnum]
         );
 
         // Return the created boat record
@@ -58,10 +63,11 @@ app.post("/boats", upload.array("images"), async (req, res) => {
     }
 });
 
-//GET ALL CREATURES
+//GET ALL BOAtS
 app.get("/boats", async (req, res) => {
     try {
         const allBoats = await pool.query("SELECT * FROM boats");
+        res.setHeader('X-Total-Count', allBoats.rows.length);
         res.json(allBoats.rows);
     } catch (error) {
         console.error(error.message);
@@ -80,23 +86,23 @@ app.get("/boats/:id", async (req, res) => {
 });
 
 //UPDATE A CREATURE
-app.put("/creatures/:id", async (req, res) => {
-    try {
-        const { id } = req.params;
-        const { cr_name, cr_desc } = req.body;
-        const updateCreature = await pool.query("UPDATE creatures SET cr_name = $1, cr_desc = $2 WHERE cr_id = $3", [cr_name, cr_desc, id]);
-        res.json("Creature was updated!");
-    } catch (error) {
-        console.error(error);
-    }
-});
+// app.put("/boats/:id", async (req, res) => {
+//     try {
+//         const { id } = req.params;
+//         const { cr_name, cr_desc } = req.body;
+//         const updateCreature = await pool.query("UPDATE boats SET name = $1,  WHERE id = $3", [cr_name, cr_desc, id]);
+//         res.json("Creature was updated!");
+//     } catch (error) {
+//         console.error(error);
+//     }
+// });
 
-//DELETE A CREATURE
-app.delete("/creatures/:id", async (req, res) => {
+//DELETE A BOAT
+app.delete("/boats/:id", async (req, res) => {
     try {
         const { id } = req.params;
-        const deleteCreature = await pool.query("DELETE FROM creatures WHERE cr_id = $1", [id]);
-        res.json("Creature was deleted!");
+        const deleteBoat = await pool.query("DELETE FROM boats WHERE serialnum = $1", [id]);
+        res.json("Boat was deleted!");
     } catch (error) {
         console.error(error);
     }

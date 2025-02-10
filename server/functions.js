@@ -1,24 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 
-/**
- * Save an image to the local file system and return a file path.
- * @param {Buffer} pic - The image buffer.
- * @returns {Promise<string>} - The file path of the saved image.
- */
-
-async function apiSearch(n) {
-    try {
-        const response = await fetch(`https://www.dnd5eapi.co/api/${n}`)
-            if (!response.ok) {
-                throw new Error("Could not fetch resource");
-            }
-            const data = await response.json();
-            return data
-    } catch(error) {
-        console.error(error)
-    }
-}
 
 // Writes the image to the local file system
 async function writePicture (pic) {

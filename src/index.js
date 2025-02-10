@@ -9,9 +9,9 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import BoatMore from './routes/BoatMore';
-import Admin from './routes/Admin';
-import Login from './routes/Login';
 import Gallery from './routes/Gallery';
+import BoatUpload from './components/BoatUpload';
+import NewAdmin from './routes/NewAdmin';
 
 const router = createBrowserRouter([
   {
@@ -25,18 +25,18 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
       },
       {
-        path: "admin/",
-        element: <Admin />,
-        errorElement: <ErrorPage />,
-      },
-      {
-        path: "login/",
-        element: <Login />,
+        path: "/admin/",
+        element: <NewAdmin />,
         errorElement: <ErrorPage />,
       },
       {
         path: "gallery/",
         element: <Gallery />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "boatupload/",
+        element: <BoatUpload />,
         errorElement: <ErrorPage />,
       },
       {

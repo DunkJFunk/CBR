@@ -18,6 +18,7 @@ const Gallery = () => {
     id: 0,
     serialnum: "",
     name: "",
+    tags: [""],
     images: [""]
   }])
   
@@ -78,7 +79,7 @@ const Gallery = () => {
       ) : (
         <div></div>
       )}
-      <div id='gallery' className="min-h-screen flex flex-col items-center bg-owhite">
+      <div id='gallery' className="min-h-screen flex flex-col items-center bg-owhite pb-8">
         <div className="grid grid-cols-1 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-12">
           {isLoading ? (
             <>

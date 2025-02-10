@@ -19,6 +19,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Gopher';
+  src: url('../public/font/Gopher.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -27,6 +34,10 @@
 
 .font-jameson {
   font-family: 'Peirce Jameson Script', cursive;
+}
+
+.font-gopher {
+  font-family: 'Gopher', serif;
 }
 
 .font-playfair {
