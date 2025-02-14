@@ -1,5 +1,5 @@
-import fs from 'fs';
-import path from 'path';
+const fs = require('fs');
+const path = require('path');
 
 
 // Writes the image to the local file system
@@ -50,4 +50,4 @@ async function buildBoat (name, images) {
     }
 }
 
-export { writePicture, buildBoat };
+// export { writePicture, buildBoat };
