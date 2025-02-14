@@ -34,7 +34,7 @@ app.post("/boats", upload.array("images"), async (req, res) => {
     try {
         console.log("1");
         
-        const { name } = req.body;
+        const { name, description, tags } = req.body;
         const images = req.files;
 
         // Validate input
@@ -46,13 +46,28 @@ app.post("/boats", upload.array("images"), async (req, res) => {
 
         console.log("2");
 
+        let parsedTags = [];
+        if (tags) {
+            try {
+                parsedTags = JSON.parse(tags); // Convert string to array
+                if (!Array.isArray(parsedTags)) {
+                    return res.status(400).json({ error: "Tags must be an array" });
+                }
+            } catch (err) {
+                return res.status(400).json({ error: "Invalid tags format" });
+            }
+        }
+
+        // Get the creation date
+        // const createdDate = new Date().toISOString();
+
         // Assuming buildBoat processes the name and an array of images
         const boat = await buildBoat(name, images);
 
         // Insert into the database
         const uploadBoat = await pool.query(
-            "INSERT INTO boats (name, images, serialnum) VALUES($1, $2, $3) RETURNING *",
-            [boat.name, JSON.stringify(boat.images), boat.serialnum]
+            "INSERT INTO boats (name, description, images, serialnum, tags) VALUES($1, $2, $3, $4, $5) RETURNING *",
+            [boat.name, description, JSON.stringify(boat.images), boat.serialnum, JSON.stringify(parsedTags)]
         );
 
         // Return the created boat record
@@ -84,6 +99,26 @@ app.get("/boats/:id", async (req, res) => {
         console.error(error);
     }
 });
+
+//GET A BOAT BY TAG
+app.get("/boats/tag/:tag", async (req, res) => {
+    try {
+        const { tag } = req.params;
+        
+        // Correct query using JSONB containment operator `@>`
+        const boats = await pool.query(
+            "SELECT * FROM boats WHERE tags::jsonb @> $1::jsonb",
+            [JSON.stringify([tag])]
+        );
+
+        res.json(boats.rows);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+});
+// tags are chriscraft, century, 5200bottoms, other
+
 
 //UPDATE A CREATURE
 // app.put("/boats/:id", async (req, res) => {

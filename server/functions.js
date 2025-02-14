@@ -11,7 +11,7 @@ async function writePicture (pic) {
         const fileName = `image-${serialNumber}.jpg`; // Unique file name
 
         // Since where we access vs. save our images is different, we have two seperate relative paths
-        const filePath = path.join('../public/media', fileName);
+        const filePath = path.join('../build/media', fileName);
         const componentPath = path.join('/media', fileName);
 
         await fs.promises.writeFile(filePath, pic.buffer);

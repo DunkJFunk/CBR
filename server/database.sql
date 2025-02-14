@@ -13,6 +13,7 @@ CREATE TABLE IF NOT EXISTS boats (
     id SERIAL PRIMARY KEY,
     serialnum VARCHAR(255) NOT NULL,
     name VARCHAR(255) NOT NULL,
+    description TEXT,
     images JSONB NOT NULL,
     tags JSONB,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP

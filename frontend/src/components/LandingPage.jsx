@@ -4,11 +4,8 @@ import boatImage from "../assets/2.jpg";
 import secImage from "../assets/69.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faImage } from '@fortawesome/free-solid-svg-icons';
-import { faGear } from '@fortawesome/free-solid-svg-icons';
-import { useAuth0, Auth0Provider } from "@auth0/auth0-react";
 
 const LandingPage = () => {
-    const { loginWithRedirect } = useAuth0();
     const handleContact = () => {
         window.scrollTo({top: 99999, behavior: 'smooth'});
     };
@@ -31,9 +28,6 @@ const LandingPage = () => {
                 </Link>
                 <button onClick={handleContact} className="py-4 px-4 bg-slate-900 rounded text-white mt-10 text-xl max-sm:px-8 hidden max-sm:block">Contact Us</button>
             </div>
-            <Link to="/admin">
-                <FontAwesomeIcon onClick={loginWithRedirect} icon={faGear} className="h-8 text-slate-900 absolute bottom-5 right-5"/>
-            </Link>
         </div>
     );
 }
